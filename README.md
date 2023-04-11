@@ -11,4 +11,6 @@ Files are sorted according to the Module Names.
 
 |Module| Module Name| Descriptions|
 |-----|----|---|
+|PRA1005| Data Collection Techniques in Neuroscience| |
+|PRA3012| Topics in Scientific Computing| |
 
