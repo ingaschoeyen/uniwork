@@ -1,0 +1,31 @@
+## Clustering and Classification
+
+#S etup
+% Read the data and plot it
+
+filename = 'StarTypeDataset.csv';
+data=csvread(filename,1,0);
+% plot data
+newplot
+scatter(data(:,1), data(:,2), '+');
+title('Star Type Dataset'),
+xlabel('Temperature'),ylabel('Absolute Magnitude')
+
+# My K-means function
+k = 6;
+max_iter = 10;
+[ind, centres] = myKmeans(data, k, max_iter);
+
+# My KNN function
+training_data = csvread("StarTypeDataset.csv", 1, 0);
+rng(2);
+K = 6;
+% C = kmeans(traing_data,K); % using matlab function bcos my Kmeans function is not rel
+% 
+% training_data = cat(2, training_data, C);
+
+
+max_iter = 50;
+
+test_data = [0.75 -0.1;-0.9 -0.1;0.6 0.08;-1.25 -0.2];
+test_labels = myKNN(training_data, test_data, K, max_iter);
